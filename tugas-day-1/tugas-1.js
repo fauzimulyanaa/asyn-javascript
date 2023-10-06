@@ -1,13 +1,14 @@
 const method = "GET";
 const url = "https://jsonplaceholder.typicode.com/posts";
 
-const ajax = new XMLHttpRequest();
-ajax.open(method, url);
-ajax.send();
+
 
 // pake callback
 
 // const getTodos = (method, url, callback) => {
+// const ajax = new XMLHttpRequest();
+// ajax.open(method, url);
+// ajax.send();
 //   ajax.onreadystatechange = () => {
 //     if (ajax.status === 200) {
 //       const result = JSON.parse(ajax.responseText);
@@ -29,6 +30,9 @@ ajax.send();
 // pake promise
 
 const getTodos = (method, url) => {
+  const ajax = new XMLHttpRequest();
+ajax.open(method, url);
+ajax.send();
   return new Promise((resolve, reject) => {
     ajax.onreadystatechange = () => {
       if (ajax.status === 200) {
